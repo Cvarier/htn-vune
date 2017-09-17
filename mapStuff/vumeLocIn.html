@@ -131,7 +131,7 @@
         },
 
         function error(err) {
-          alert("Error");
+          alert("Sorry, we were unable to upload your file: " + err);
 
         },
 
@@ -155,22 +155,22 @@
 
 }).catch(function(error) {
   // Handle any errors
-  alert("Error");
+  alert("Sorry, we were unable to upload your file: " + error.message);
 });
 alert("Done uploading, click Planet Vune");
         }
         );
     });
     //
-      var lat = 38.9424;
-      var longi = -92.3277;
+      var lat = 43.472981;
+      var longi = -80.540105;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
-          center: {lat: 38.9424, lng: -92.3277}
+          center: {lat: 43.472981, lng: -80.540105}
         });
 
-        var myLatLng = {lat: 38.9434, lng: -92.3287};
+        var myLatLng = {lat: 43.472981, lng: -80.540105};
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
@@ -245,8 +245,8 @@ console.log("----"+data.val().lat);
 
 	  function writeUserData() {
   firebase.database().ref('users/').set({
-    "lat": 38.9434,
-    "long": -92.3277
+    "lat": 43.472981,
+    "long": -80.540105
   });
 }
     </script>
